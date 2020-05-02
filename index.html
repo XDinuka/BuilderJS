@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script src="Builder.js"></script>
+    <script>
+        document.querySelector('body').appendChild(
+            BuilderJS.create('div')
+            .addClass('test')
+            .addClass('test2')
+            .setInnerText('TEXT')
+            .setStyle('color','red')
+            .removeStyle('color')
+            .setStyle('font-family','montserrat')
+            .appendChild(
+                BuilderJS.create('p')
+                .setInnerText('TEXT')
+                .setStyle('color','green')
+                .build()
+            )
+            .build());
+    </script>
+</body>
+</html>
